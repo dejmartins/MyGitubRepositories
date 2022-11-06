@@ -1,0 +1,25 @@
+.repository-list {
+    list-style: none;
+    border: 1px solid;
+    align-content: center;
+    width: 700px;
+}
+
+.repository-list li {
+    position: relative;
+    border: 2px solid;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-left: 0;
+    border-right: 0;
+    width: 100%;
+    min-height: 140px;
+    /* line-height: 6px; */
+}
+
+.repo-link{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+}
+
