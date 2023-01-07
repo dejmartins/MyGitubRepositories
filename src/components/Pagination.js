@@ -1,6 +1,6 @@
 import React from "react";
 
-const Pagination = ({ reposPerPage, totalRepos, paginate }) => {
+const Pagination = ({ pageNumber, reposPerPage, totalRepos, paginate }) => {
   const pageNumbers = [];
   for (let i = 1; i <= Math.ceil(totalRepos / reposPerPage); i++) {
     pageNumbers.push(i);
@@ -12,7 +12,15 @@ const Pagination = ({ reposPerPage, totalRepos, paginate }) => {
         <ul className="pagination">
           {pageNumbers.map((number) => (
             <li key={number} className="page-item">
-              <button onClick={() => paginate(number)} className="page-link">
+              <button
+                style={{
+                  backgroundColor: pageNumber === number ? "green" : null,
+                  borderRadius: "5px",
+                  marginRight: "10px",
+                }}
+                onClick={() => paginate(number)}
+                className="page-link"
+              >
                 {number}
               </button>
             </li>

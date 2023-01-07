@@ -58,6 +58,7 @@ function App() {
               <>
                 <Repositories loading={loading} repos={currentRepos} />
                 <Pagination
+                  pageNumber={currentPage}
                   reposPerPage={reposPerPage}
                   totalRepos={repos.length}
                   paginate={paginate}
