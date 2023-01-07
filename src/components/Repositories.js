@@ -15,8 +15,6 @@ const Repositories = ({ repos, loading }) => {
     auth.signOut();
   };
 
-  console.log(repos);
-
   return (
     <>
       <Helmet>

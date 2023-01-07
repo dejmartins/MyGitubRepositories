@@ -4,10 +4,15 @@ import { Link, useParams } from "react-router-dom";
 const RepositoryDetails = ({ repos }) => {
   const { repoName } = useParams();
 
+  let x = repos.filter((repo) => repo.name === repoName);
+  if (x.length === 0) {
+    throw new Error("Invalid URL");
+  }
+
   return (
-    <div className="repo-modal">
+    <div className="modal">
       <h5>More Details:</h5>
-      <div className="repo-details-container">
+      <div className="details-container">
         {repos
           .filter((repo) => repo.name === repoName)
           .map((repo) => (

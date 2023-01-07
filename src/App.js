@@ -4,9 +4,11 @@ import Home from "./components/Home";
 import { useEffect, useState } from "react";
 import Repositories from "./components/Repositories";
 import Pagination from "./components/Pagination";
+import Page404 from "./components/Page404";
 import RepositoryDetails from "./components/RepositoryDetails";
 import { Route, Routes, Navigate, useNavigate } from "react-router-dom";
 import { auth, onAuthStateChanged } from "./config/index";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
   const [repos, setRepos] = useState([]);
@@ -73,9 +75,14 @@ function App() {
         >
           <Route
             path=":repoName"
-            element={<RepositoryDetails repos={currentRepos} />}
+            element={
+              <ErrorBoundary>
+                <RepositoryDetails repos={currentRepos} />
+              </ErrorBoundary>
+            }
           />
         </Route>
+        <Route path="*" element={<Page404 />}></Route>
       </Routes>
     </div>
   );

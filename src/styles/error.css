@@ -1,0 +1,30 @@
+.error {
+  display: block;
+  line-height: 0;
+  text-align: center;
+  padding-top: 20px;
+  color: rgb(115, 75, 1);
+}
+
+.error h1 {
+  font-size: 320px;
+}
+
+.error h3 {
+  font-size: 65px;
+}
+
+.error .link {
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.link_button {
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 5px solid rgb(136, 159, 177);
+  color: green;
+}
