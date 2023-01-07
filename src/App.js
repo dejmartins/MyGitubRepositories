@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Repositories from "./components/Repositories";
 import Pagination from "./components/Pagination";
 import RepositoryDetails from "./components/RepositoryDetails";
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate, useNavigate } from "react-router-dom";
 import { auth, onAuthStateChanged } from "./config/index";
 
 function App() {
@@ -41,9 +41,11 @@ function App() {
   const indexOfLastRepo = currentPage * reposPerPage;
   const indexOfFirstRepo = indexOfLastRepo - reposPerPage;
   const currentRepos = repos.slice(indexOfFirstRepo, indexOfLastRepo);
+  const navigate = useNavigate();
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
+    navigate("/repositories");
   };
 
   return (
