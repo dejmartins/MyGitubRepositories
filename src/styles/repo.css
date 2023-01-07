@@ -1,25 +1,95 @@
+.header {
+  margin-bottom: 40px;
+}
+
+.repository-container {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
 .repository-list {
-    list-style: none;
-    border: 1px solid;
-    align-content: center;
-    width: 700px;
+  list-style: none;
+  align-content: center;
+  width: 700px;
 }
 
 .repository-list li {
-    position: relative;
-    border: 2px solid;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    border-left: 0;
-    border-right: 0;
-    width: 100%;
-    min-height: 140px;
-    /* line-height: 6px; */
+  position: relative;
+  border-top: 1px solid rgb(53, 40, 3);
+  margin-top: 35px;
+  width: 100%;
+  color: white;
 }
 
-.repo-link{
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 25px;
+.summary {
+  border: 1px solid rgb(136, 159, 177);
+  border-radius: 6px;
+  padding: 0 15px;
 }
 
+.repo-link {
+  color: rgb(166, 165, 165);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+#sign-out-button {
+  color: rgb(25, 134, 0);
+  position: absolute;
+  right: 35px;
+  top: 30px;
+  margin-bottom: 20px;
+  padding: 7px 25px;
+  border-radius: 8px;
+  border: 3px solid rgb(136, 159, 177);
+  cursor: pointer;
+}
+
+.repo-modal {
+  width: 500px;
+  height: 300px;
+  border-radius: 25px;
+  background-color: rgb(136, 159, 177);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.repo-modal h5 {
+  margin-left: 20px;
+  background-color: transparent;
+  font-size: 20px;
+  margin-bottom: 0;
+  margin-left: 35px;
+  color: rgb(53, 40, 3);
+}
+
+.repo-details-container {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  margin: 0px 45px;
+  color: black;
+}
+
+.repo-card {
+  background-color: transparent;
+}
+
+.repo-card p {
+  background-color: transparent;
+}
+
+.close-button {
+  position: absolute;
+  background-color: transparent;
+  text-decoration: none;
+  color: rgb(154, 22, 2);
+  right: 35px;
+  top: 30px;
+}

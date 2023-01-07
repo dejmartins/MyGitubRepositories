@@ -1,0 +1,10 @@
+.page-item {
+  color: white;
+  display: inline;
+}
+
+.page-item button {
+  color: white;
+  border: none;
+  cursor: pointer;
+}

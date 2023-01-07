@@ -44,7 +44,6 @@ function App() {
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
-    console.log(currentRepos);
   };
 
   return (
