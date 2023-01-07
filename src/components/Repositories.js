@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 const Repositories = ({ repos, loading }) => {
   const location = useLocation();
   if (loading) {
-    return <p>Loading...</p>;
+    return <p id="loading">Loading...</p>;
   }
 
   const signOut = (event) => {
